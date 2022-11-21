@@ -29,7 +29,7 @@
 
 ### **单条文本属性级情感分析：**
 
-![系统_单文本情感分析](D:/emotion/picture/%E7%B3%BB%E7%BB%9F_%E5%8D%95%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90.png)
+![系统_单文本情感分析](https://gitee.com/hchhtc123/picture/raw/master/typora/%E7%B3%BB%E7%BB%9F_%E5%8D%95%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90.png)
 
 ### **批量文本属性级情感分析：**
 
