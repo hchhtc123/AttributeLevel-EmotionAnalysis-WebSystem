@@ -44,7 +44,7 @@ import paddle
 paddle.utils.run_check()
 // 若提示“PaddlePaddle is installed successfully!”则安装成功！
 
-// 下载最新版PaddleNLP，若出现不兼容问题可以考虑指定版本降级
+// 下载最新版PaddleNLP，若出现不兼容问题可以考虑指定版本降级，注意PaddleNLP和PaddlePaddle版本要匹配
 pip install --upgrade paddlenlp
 
 // 下载后端依赖Web框架FastAPI
@@ -59,14 +59,16 @@ pip install openpyxl
 https://bj.bcebos.com/paddlenlp/models/best_ext.pdparams
 https://bj.bcebos.com/paddlenlp/models/best_cls.pdparams
 // 下载完成后，将模型参数文件移动到backend/model/文件夹下！！
+// 若模型读取出现'paddle.load' can not parse the file，使用rb open一下file
 
 // 启动后端项目：
-// 通过cd命令进行项目backend文件夹，运行demo演示程序进行测试
+// 通过cd命令进行项目backend文件夹，运行demo演示程序进行模型预测测试
 python demo.py
 
 // 通过cd命令进行项目backend文件夹，启动后端接口服务！
 python main.py
 // ps:  初次启动会进行一次模型预测操作进行预热，时间会稍久些但可有效提高后续接口访问的性能。看到“Application startup complete”和“Uvicorn ruuning on http:127.0.0.1:8000”代表后端项目启动成功
+// 若出现显存不足可以考虑换用CPU版本或升级设备
 
 // 接口调试可以下载安装Postman软件便于后端Restful API接口的访问测试。
 Postman使用参考：https://mp.weixin.qq.com/s/IoseF-2Ma8mH2gdQLn1rUA
@@ -78,6 +80,7 @@ Postman使用参考：https://mp.weixin.qq.com/s/IoseF-2Ma8mH2gdQLn1rUA
 
 安装node.js，因项目需要使用到npm管理包！！！
 参考：https://m.php.cn/article/483528.html
+// 个人node.js版本为16.16.0，建议版本不要太高
 
 // 通过cd命令进行项目frontend文件夹，安装项目所需依赖
 npm install
