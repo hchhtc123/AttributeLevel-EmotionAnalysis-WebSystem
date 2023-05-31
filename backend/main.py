@@ -99,7 +99,7 @@ async def BatchEmotionAnalysis(file: UploadFile):
     try:
         # 将添加时间标记重命名避免重复
         now_time = int(time.mktime(time.localtime(time.time())))
-        filePath = "./resource/" + str(now_time) + "_" + fileName
+        filePath = "./static/" + str(now_time) + "_" + fileName
         # 将用户上传的文件保存到本地
         fout = open(filePath, 'wb')
         fout.write(fileBytes)
@@ -122,5 +122,5 @@ async def BatchEmotionAnalysis(file: UploadFile):
         print("异常信息：", e)
         raise HTTPException(status_code=500, detail=str("请求失败，服务器端发生异常！异常信息提示：" + str(e)))
 
-# 启动创建的实例app，设置启动ip和端口号
+# 启动创建的实例app，设置启动ip和端口号。服务器部署时修改为0.0.0.0
 uvicorn.run(app, host="127.0.0.1", port=8000)

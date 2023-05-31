@@ -132,7 +132,7 @@ if __name__== "__main__" :
     predict(input_text, ext_model, cls_model, tokenizer, ext_id2label, cls_id2label,  max_seq_len=max_seq_len)
 
     # 读取Excel文件内容进行批量情感分析
-    df = pd.read_excel('./resource/测试数据.xlsx', index_col=None)
+    df = pd.read_excel('./static/测试数据.xlsx', index_col=None)
     # 读取Excel中列名为"text"或"文本"的数据，若无该列名则默认读取第一列数据
     if 'text' in df.columns:
         contents = df['text']

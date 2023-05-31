@@ -83,7 +83,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'https://github.com/hchhtc123/AttributeLevel-EmotionAnalysis-WebSystem',
-        meta: { title: '跳转Github', icon: 'link' }
+        meta: { title: '项目地址', icon: 'link' }
       }
     ]
   },
